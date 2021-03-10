@@ -1,0 +1,13 @@
+<html>
+    <body style="background:linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);">
+        <h1>Search Page</h1>
+        <form action="{%url 'search_results' %}" method="get">
+            <Strong>Enter either MPAN Core or Meter ID or Register Reading to search for corresponding entry in the database</strong>
+            <br>
+            <input name = "q" type="text" placeholder="Search">
+            <br>
+            <button type="submit" class = "save btn btn-default">Submit</button>
+        </form>
+        <a href="{%url 'home_page' %}">Home Page</a>
+    </body>
+</html>

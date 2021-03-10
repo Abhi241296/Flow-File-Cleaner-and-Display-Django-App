@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Clean File Upload</title>
+    </head>
+    <body style="background:linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);">
+        <p><h1>Clean File Upload</h1></p>
+        <form method="POST" action ="{%url 'upclean'%}" class="post-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class = "save btn btn-default">Upload</button>
+        </form>
+        <a href="{%url 'home_page' %}">Home Page</a>
+    </body>
+</html>

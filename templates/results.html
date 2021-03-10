@@ -1,0 +1,36 @@
+<html>
+    <body style="background:linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);">
+        <h1>Search Results</h1>
+        <table>
+            <tr>
+                <th>MPAN Core</th>
+                <th>BSC Validation Status</th>
+                <th>Meter ID</th>
+                <th>Reading Type</th>
+                <th>Meter Register ID</th>
+                <th>Reading Date Time</th>
+                <th>Register Reading</th>
+                <th>Meter Reading Flag</th>
+                <th>Reading Method</th>
+                <th>Filename</th>
+            </tr>
+            {% for reading in object_list %}
+                <tr>
+                    <td>{{reading.MPAN_Core}}</td>
+                    <td>{{reading.BSC_Validation_Status}}</td>
+                    <td>{{reading.Meter_ID}}</td>
+                    <td>{{reading.Reading_Type}}</td>
+                    <td>{{reading.Meter_Register_ID}}</td>
+                    <td>{{reading.Reading_Date_Time}}</td>
+                    <td>{{reading.Register_Reading}}</td>
+                    <td>{{reading.Meter_Reading_Flag}}</td>
+                    <td>{{reading.Reading_Method}}</td>
+                    <td>{{reading.file}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <a href="{%url 'search'%}">Search Another Query</a>
+        <a href="{%url 'home_page' %}">Home Page</a>
+    </body>
+</html>
